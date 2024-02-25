@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <title>Jonatha Fabricio</title>
+</head>
+
+<body>
+    <div id="confetti-container"></div>
+
+    <div class="container">
+        <div id="date-input-container">
+            <input type="datetime-local" id="target-date-input" min="2024-01-01T00:00" max="2030-12-31T23:59">
+            <button id="start-countdown">Iniciar Contagem Regressiva</button>        
+        </div>
+        
+        <div id="email-reminder-container" class="email-reminder" style="display:none;">
+            <p class="reminder-question">Deseja receber um lembrete quando o cronômetro zerar?</p>
+            <div class="buttons-container">
+                <button id="yes-reminder" class="reminder-btn yes">Sim</button>
+                <button id="no-reminder" class="reminder-btn no">Não</button>
+            </div>
+        </div>
+
+        <div id="enter-email-container" style="display:none;">
+            <p>Digite seu e-mail e irei te avisar:</p>
+            <input type="email" id="reminder-email-input">
+            <button id="submit-email">Enviar</button>
+        </div>
+
+
+        <div id="countdown">
+            <p id="timer">
+                <span id="days"></span>
+                <span class="timer-unit">Days</span>
+                <span id="hours"></span>
+                <span class="timer-unit">Hours</span>
+                <span id="minutes"></span>
+                <span class="timer-unit">Minutes</span>
+                <span id="seconds"></span>
+                <span class="timer-unit">Seconds</span>
+            </p>
+        </div>
+        <footer>
+            <a href="https://www.linkedin.com/in/jonatha-fabricio/" id="linkPerfil" target="_blank">Jonatha Fabricio</a>
+        </footer>
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/particles.js"></script>
+</body>
+
+</html>

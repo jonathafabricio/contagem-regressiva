@@ -1,0 +1,225 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/img/background.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: white;
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+  #countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.6rem;
+    height: 54%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  #timer {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin: 0 auto;
+
+  }
+  
+  .timer-unit {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: block;
+  }
+
+  #date-input-container {
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  
+  #target-date-input,
+  #start-countdown {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: border-box; 
+  }
+  
+  #target-date-input {
+    width: 60%;
+    max-width: none; 
+  }
+  
+  #start-countdown {
+    background-color: #2193b0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+  
+  #start-countdown:hover {
+    background-color: #6dd5ed;
+  }
+
+  .email-reminder {
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    margin-bottom: 1rem;
+    margin-top: -1.5rem;
+}
+
+.reminder-question {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.buttons-container {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.reminder-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.no {
+    background-color: #f44336;
+    color: white;
+}
+
+.reminder-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#enter-email-container {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+  margin-bottom: 0.75rem;
+  margin-top: -1.5rem;
+}
+
+#enter-email-container p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #ffffff; 
+}
+
+#reminder-email-input {
+  padding: 7px;
+  margin-bottom: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  width: 80%;  
+}
+
+#submit-email {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #007bff; 
+  color: white;
+}
+
+#submit-email:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#confetti-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a#linkPerfil {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease; 
+  display: inline-block;
+}
+
+footer a#linkPerfil:hover {
+  color: #0e76a8;
+  transform: scale(1.5); 
+  cursor: pointer;
+}
+
+  @media (max-width: 600px) {
+    #timer {
+        font-size: 2rem;
+    }
+    .timer-unit {
+        font-size: 1rem;
+    }
+    #target-date-input,
+    #start-countdown {
+      width: 70%; 
+      padding: 8px; 
+    }
+  
+    #target-date-input {
+      max-width: none; 
+    }
+  }
