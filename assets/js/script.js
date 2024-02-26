@@ -11,7 +11,6 @@ function askNotificationPermission() {
   }
 }
 
-
 document.getElementById('start-countdown').addEventListener('click', function() {
     askNotificationPermission();
     initiateCountdown();
@@ -61,14 +60,27 @@ document.getElementById('no-reminder').addEventListener('click', function() {
 });
 
 document.getElementById('submit-email').addEventListener('click', function() {
-    const email = document.getElementById('reminder-email-input').value;
-    if(email) { 
+    const emailInput = document.getElementById('reminder-email-input');
+    const email = emailInput.value;
+
+    if(email && validateEmail(email)) {
         window.userEmail = email;
+
+        document.getElementById('enter-email-container').style.display = 'none';
+        document.getElementById('email-reminder-container').style.display = 'none';
+        
+        emailInput.value = '';
 
     } else {
         alert('Por favor, insira um endereço de e-mail válido.');
     }
 });
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 
 function startCountdown() {
     const inputDate = document.getElementById('target-date-input').value;
